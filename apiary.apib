@@ -1,0 +1,90 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# firstOne123
+
+Polls is a simple API allowing consumers to view polls and vote in them.
+
+## Questions Collection [/questions]
+
+### List All Questions [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 2048
+                    }, {
+                        "choice": "Python",
+                        "votes": 1024
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 512
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 256
+                    }
+                ]
+            }
+        ]
+## First question [/question/1]
+
+Get the first question. 
+
+### First question  [GET]
+
++ Response 200 (application/json)
+
+        {
+            "title": "Custom JSON response",
+            "question": "Favourite programming language?",
+            "published_at": "2015-08-05T08:40:51.620Z",
+            "choices": [
+                {
+                    "choice": "Swift",
+                    "votes": 2048
+                }, {
+                    "choice": "Python",
+                    "votes": 1024
+                }, {
+                    "choice": "Objective-C",
+                    "votes": 512
+                }, {
+                    "choice": "Ruby",
+                    "votes": 256
+                }
+            ]
+        }
+## Second question [/question/2]
+
+Get the second question. 
+
+### Second question  [GET]
+
++ Response 200 (application/json)
+
+        {
+            "title": "Custom JSON response",
+            "question": "Favourite programming language?",
+            "published_at": "2015-08-05T08:40:51.620Z",
+            "choices": [
+                {
+                    "choice": "Swift",
+                    "votes": 2048
+                }, {
+                    "choice": "Python",
+                    "votes": 1024
+                }, {
+                    "choice": "Objective-C",
+                    "votes": 512
+                }, {
+                    "choice": "Ruby",
+                    "votes": 256
+                }
+            ]
+        }
