@@ -18,4 +18,4 @@ It represents one paste - a single text note.
 
 + Response 200
 
-  [Post][]
+  [Post]
