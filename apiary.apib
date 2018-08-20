@@ -1,90 +1,40 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
 
-# firstOne123
+# This is groupping file for all specs and responses
 
-Polls is a simple API allowing consumers to view polls and vote in them.
 
-## Questions Collection [/questions]
+# Group Gist
 
-### List All Questions [GET]
+## Post [/post/{id}]
+A single Gist object.
+The Gist resource is the central resource in the Gist Fox API.
+It represents one paste - a single text note.
 
-+ Response 200 (application/json)
++ Parameters
+  + id (string) ... ID of the post in the form of a hash.
 
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
-        ]
-## First question [/question/1]
++ Model
 
-Get the first question. 
+    + Body
 
-### First question  [GET]
-
-+ Response 200 (application/json)
-
-        {
-            "title": "Custom JSON response",
-            "question": "Favourite programming language?",
-            "published_at": "2015-08-05T08:40:51.620Z",
-            "choices": [
-                {
-                    "choice": "Swift",
-                    "votes": 2048
-                }, {
-                    "choice": "Python",
-                    "votes": 1024
-                }, {
-                    "choice": "Objective-C",
-                    "votes": 512
-                }, {
-                    "choice": "Ruby",
-                    "votes": 256
-                }
-            ]
+      ```
+       {
+          "userId": 1,
+          "id": 1,
+          "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+          "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
         }
-## Second question [/question/2]
+      ```
 
-Get the second question. 
+### Retrieve a Single Gist [GET]
 
-### Second question  [GET]
++ Response 200
 
-+ Response 200 (application/json)
+  [Post][]
 
-        {
-            "title": "Custom JSON response",
-            "question": "Favourite programming language?",
-            "published_at": "2015-08-05T08:40:51.620Z",
-            "choices": [
-                {
-                    "choice": "Swift",
-                    "votes": 2048
-                }, {
-                    "choice": "Python",
-                    "votes": 1024
-                }, {
-                    "choice": "Objective-C",
-                    "votes": 512
-                }, {
-                    "choice": "Ruby",
-                    "votes": 256
-                }
-            ]
-        }
+ {
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+  }
