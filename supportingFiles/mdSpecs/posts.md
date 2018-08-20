@@ -16,4 +16,4 @@ Post model
 
 + Response 200
 
-  [Post]
+  [Post][]
